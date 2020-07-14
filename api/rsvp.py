@@ -1,7 +1,7 @@
 import os
 import uuid
 
-from flask import Flask, Response
+from flask import Flask, Response, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from sqlalchemy.dialects.postgresql import UUID
@@ -28,6 +28,18 @@ class Guests(db.Model):
 
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
-def catch_all(path):
-    return Response(
-        "<h1>Flask</h1><p>You visited: /%s</p>" % (path), mimetype="text/html")
+def handle_rsvp(path):
+    # if request.method == 'POST':
+    #     if request.is_json:
+    #         data = request.get_json()
+    #         new_car = CarsModel(name=data['name'], model=data['model'], doors=data['doors'])
+    #         db.session.add(new_car)
+    #         db.session.commit()
+    #         return {"message": f"car {new_car.name} has been created successfully."}
+    #     else:
+    #         return {"error": "The request payload is not in JSON format"}
+    #
+    if request.method == 'GET':
+        guests = Guests.query.all()
+        results = [guest.to_json() for guest in guests]
+        return {"count": len(results), "guests": guests}
