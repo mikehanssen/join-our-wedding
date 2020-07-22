@@ -1,0 +1,21 @@
+$index: 10
+
+@while $index <= 100
+  .mt-#{$index}
+    margin-top: #{$index}px
+  .mb-#{$index}
+    margin-bottom: #{$index}px
+  .pt-#{$index}
+    padding-top: #{$index}px
+  .pb-#{$index}
+    padding-bottom: #{$index}px
+  @media screen and (max-width: 500px)
+    .mt-#{$index}
+      margin-top: #{$index / 1.5}px
+    .mb-#{$index}
+      margin-bottom: #{$index / 1.5}px
+    .pt-#{$index}
+      padding-top: #{$index / 1.5}px
+    .pb-#{$index}
+      padding-bottom: #{$index / 1.5}px
+  $index: $index + 5

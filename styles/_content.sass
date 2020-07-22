@@ -1,0 +1,61 @@
+.content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    text-align: center
+    width: 100%
+    max-width: 400px
+    margin-left: auto
+    margin-right: auto
+    padding-left: 10px
+    padding-right: 10px
+
+.mike-kayleigh-img
+    display: block
+    width: 100%
+    max-width: 600px
+    margin-left: auto
+    margin-right: auto
+
+.mike-kayleigh-wrapper
+    width: 100%
+
+/* Clip text element */
+.clip-text
+    font-size: 72px
+    font-weight: bold
+    line-height: 1
+    position: relative
+    display: inline-block
+    text-align: center
+    /* Color fallback */
+    color: #000
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-image: url('/img/clip-img.png')
+
+.clip-text:before,
+.clip-text:after
+    position: absolute
+    content: ''
+
+/* Background */
+.clip-text:before
+    z-index: -2
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-image: inherit
+
+/* Text Background (black zone) */
+.clip-text:after
+    position: absolute
+    z-index: -1
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-color: #fff
+    .rsvp &
+        background-color: #163045

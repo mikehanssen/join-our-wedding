@@ -1,21 +1,29 @@
 import Link from 'next/link';
 import Layout from '../components/layout';
-import homeStyles from '../styles/home.module.sass';
 
 export default function Home() {
   return (
     <Layout>
-      <div className={homeStyles.flowers}>
-        <img alt="Flowers header" className={homeStyles.flowersImage} src="/flowers-header.svg" />
-      </div>
-      <div>
-        <div className={homeStyles.headerNames}>
-          <h1>Kayleigh & Mike</h1>
+      <div className="flowers" />
+      <div className="content">
+        <div className="clip-text">
+          Save the
+          <br />
+          date
         </div>
-        <Link href="/rsvp"><a>RSVP</a></Link>
-      </div>
-      <div>
-        <img alt="Kayleigh & mike" src="/images/footer-image.jpg" />
+        <div className="names">Kayleigh & Mike</div>
+        <div className="clip-text clip-text_one">02.10.20</div>
+        <Link href="/rsvp">
+          <a className="btn-primary mt-80">
+            <span className="letter">R</span>
+            <span className="letter">S</span>
+            <span className="letter">V</span>
+            <span className="letter">P</span>
+          </a>
+        </Link>
+        <div className="mike-kayleigh-wrapper mt-100">
+          <img src="/img/mike-kayleigh.jpg" className="mike-kayleigh-img" alt="" />
+        </div>
       </div>
     </Layout>
   );
