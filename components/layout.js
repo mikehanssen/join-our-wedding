@@ -2,9 +2,6 @@ import Head from 'next/head';
 import { useState } from 'react';
 import MobileMenu from './mobile-menu';
 
-const name = 'K & M';
-export const siteTitle = 'Join Our Wedding | K & M';
-
 export default function Layout({ children, className = undefined, pageTitle = 'Home' }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
