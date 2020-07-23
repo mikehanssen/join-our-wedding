@@ -2,6 +2,7 @@ import os
 import uuid
 from typing import Dict, Any, Optional
 
+from flask_cors import CORS
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 from flask_httpauth import HTTPTokenAuth
@@ -11,6 +12,7 @@ from sqlalchemy.dialects.postgresql import UUID
 
 # Initialize App
 app = Flask(__name__)
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 auth = HTTPTokenAuth(scheme='Bearer')
 
 # Set config vars

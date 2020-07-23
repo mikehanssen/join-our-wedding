@@ -1,34 +1,55 @@
 import { useState, useEffect } from 'react';
 import Layout from '../components/layout';
 
+import useGuest from '../data/use-guest';
+
 export default function RSVP() {
-  const [rsvpCode, setRsvpCode] = useState(undefined);
+  const [form, setFormChange] = useState(undefined);
+  const [rsvpCode, setRsvpCode] = useState('temp');
+  const { guest, isLoading, isError } = useGuest(rsvpCode);
 
-  const handleChange = (event) => {
-    setRsvpCode(event.target.value);
+  const handleInputChange = (e) => setFormChange({
+    ...form,
+    [e.currentTarget.name]: e.currentTarget.value,
+  });
+
+  const submitRsvpForm = () => {
+    setRsvpCode(form.rsvpCode);
   };
 
-  const submitRsvpForm = async () => {
-    console.log(rsvpCode);
-  };
+  useEffect(() => {
+    console.log(isLoading, isError, guest);
+  }, [isLoading, guest]);
 
   return (
-    <Layout className="rsvp">
+    <Layout className="rsvp" pageTitle="RSVP">
+      {isLoading
+        && <div>LOADING....</div>}
       <div className="content mb-100">
         <div className="clip-text mt-80">
           RSVP
         </div>
-        <p className="mt-50 mb-20">Vul hier jouw persoonlijke code in:</p>
-        <div className="rsvp-input-wrapper">
-          <input type="text" className="rsvp-code" onChange={handleChange} value={rsvpCode} />
-        </div>
-        <button onClick={submitRsvpForm} className="btn-primary m--yellow mt-80">
-          <span className="letter">E</span>
-          <span className="letter">N</span>
-          <span className="letter">T</span>
-          <span className="letter">E</span>
-          <span className="letter">R</span>
-        </button>
+        {!guest || !('name' in guest) ? (
+          <div>
+            <p className="mt-50 mb-20">Vul hier jouw persoonlijke code in:</p>
+            <div className="rsvp-input-wrapper">
+              <input type="text" name="rsvpCode" className="rsvp-code" onChange={handleInputChange} />
+            </div>
+            <button onClick={submitRsvpForm} className="btn-primary m--yellow mt-80">
+              <span className="letter">E</span>
+              <span className="letter">N</span>
+              <span className="letter">T</span>
+              <span className="letter">E</span>
+              <span className="letter">R</span>
+            </button>
+          </div>
+        ) : (
+          <div>
+            <h1>
+              {`Welkom ${guest.name}`}
+            </h1>
+          </div>
+        )}
       </div>
     </Layout>
   );

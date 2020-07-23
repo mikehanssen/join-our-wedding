@@ -5,7 +5,7 @@ import MobileMenu from './mobile-menu';
 const name = 'K & M';
 export const siteTitle = 'Join Our Wedding | K & M';
 
-export default function Layout({ children, className = undefined }) {
+export default function Layout({ children, className = undefined, pageTitle = 'Home' }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -17,6 +17,7 @@ export default function Layout({ children, className = undefined }) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="" />
+        <title>K & M | {pageTitle}</title>
       </Head>
       <header className="header">
         <img src="/img/logo.svg" alt="" className="logo" />
