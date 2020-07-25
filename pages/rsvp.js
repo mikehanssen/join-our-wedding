@@ -25,13 +25,13 @@ export default function RSVP() {
     <Layout className="rsvp" pageTitle="RSVP">
       {isLoading
         && <div>LOADING....</div>}
-      <div className="content mb-100">
+      <div className="content flowers-corner-bottom pb-100">
         <div className="clip-text mt-80">
           RSVP
         </div>
         {!guest || !('name' in guest) ? (
           <div>
-            <p className="mt-50 mb-20">Vul hier jouw persoonlijke code in:</p>
+            <p className="fts-24 rsvp-header mt-50 mb-40">Vul hier jouw persoonlijke code in:</p>
             <div className="rsvp-input-wrapper">
               <input type="text" name="rsvpCode" className="rsvp-code" onChange={handleInputChange} />
             </div>

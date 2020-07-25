@@ -1,3 +1,23 @@
+.practical-info-container
+    max-width: 1280px
+    flex-wrap: wrap
+    display: flex
+    justify-content: space-between
+
+.practical-info-wrapper
+    width: 30%
+    display: flex
+    align-items: center
+    flex-direction: column
+
+.practical-info
+    width: 100%
+    max-width: 300px
+    p
+        font-family: "Times New Roman", serif
+        font-size: 12px
+        line-height: 1.9
+
 .practical-info-img
     display: block
     
@@ -21,3 +41,11 @@
 .practical-info-description
     text-align: left
     font-size: 12px
+
+@media only screen and (max-width: 850px)
+    .practical-info-wrapper
+        width: 50%
+
+@media only screen and (max-width: 650px)
+    .practical-info-wrapper
+        width: 100%

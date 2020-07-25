@@ -94,6 +94,7 @@ export default function Team() {
           </div>
         </div>
       </div>
+      <div className="boquete-flowers-bottom"></div>
     </Layout>
   );
 }
