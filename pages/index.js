@@ -21,9 +21,9 @@ export default function Home() {
             <span className="letter">P</span>
           </a>
         </Link>
-        <div className="mike-kayleigh-wrapper mt-100">
-          <img src="/img/mike-kayleigh.jpg" className="mike-kayleigh-img" alt="" />
-        </div>
+      </div>
+      <div className="mike-kayleigh-wrapper mt-100">
+        <img src="/img/mike-kayleigh.jpg" className="mike-kayleigh-img" alt="" />
       </div>
     </Layout>
   );

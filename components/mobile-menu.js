@@ -9,8 +9,6 @@ export default function MobileMenu({ menuOpen = false }) {
     setActiveUrl(Router.route);
   }, []);
 
-  console.log(activeUrl);
-
   return (
     <div className={menuOpen ? 'menu-open' : ''}>
       <div className="menu">

@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import MobileMenu from './mobile-menu';
+import HeaderMenu from './header-menu';
 
 export default function Layout({ children, className = undefined, pageTitle = 'Home' }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,7 +18,9 @@ export default function Layout({ children, className = undefined, pageTitle = 'H
         <title>K & M | {pageTitle}</title>
       </Head>
       <header className="header">
-        <img src="/img/logo.svg" alt="" className="logo" />
+        <div className="logo-container">
+          <img src="/img/logo.svg" alt="" className="logo" />
+        </div>
         <button className="toggle-menu" onClick={toggleMenu}>
           <span className="menu-icon-wrapper">
             <span className="top" />
@@ -25,6 +28,7 @@ export default function Layout({ children, className = undefined, pageTitle = 'H
             <span className="bottom" />
           </span>
         </button>
+        <HeaderMenu menuOpen={menuOpen}/>
       </header>
       <MobileMenu menuOpen={menuOpen}/>
       <main>{children}</main>

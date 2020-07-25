@@ -4,16 +4,37 @@
     justify-content: center
     text-align: center
     width: 100%
-    max-width: 400px
     margin-left: auto
     margin-right: auto
-    padding-left: 10px
-    padding-right: 10px
+    padding-left: 25px
+    padding-right: 25px
+
+.content-center
+    display: flex
+    justify-content: center
+    align-items: center
+
+.our-story-content
+    h1
+        max-width: 800px
+    p
+        margin-bottom: 25px
+        max-width: 400px
+
+.location-container
+    display: flex
+    .left
+        width: 60%
+    .right
+        margin-left: 30px
+        width: 40%
+    p
+        max-width: 400px
 
 .mike-kayleigh-img
     display: block
     width: 100%
-    max-width: 600px
+    max-width: 1280px
     margin-left: auto
     margin-right: auto
 
@@ -59,3 +80,25 @@
     background-color: #fff
     .rsvp &
         background-color: #163045
+
+@media only screen and (min-width: 920px)
+    .location-content
+        padding-left: 0
+
+    .our-story-content
+        padding-left: 20%
+        p
+            max-width: 400px
+
+@media only screen and (max-width: 920px)
+    .our-story-content
+        padding-left: 25px
+
+@media only screen and (max-width: 800px)
+    .location-container
+        flex-direction: column
+        .left
+            width: 100%
+        .right
+            margin-left: 0
+            width: 100%

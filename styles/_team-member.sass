@@ -1,3 +1,19 @@
+.team-members
+    max-width: 1280px
+    flex-wrap: wrap
+    display: flex
+    justify-content: space-between
+
+.team-member-wrapper
+    width: 30%
+    display: flex
+    align-items: center
+    flex-direction: column
+
+.team-member
+    width: 100%
+    max-width: 300px
+
 .team-member-img
     border-radius: 50%
     display: block
@@ -17,4 +33,12 @@
 .team-member-description
     font-style: italic
     text-align: left
-    font-size: 12px
+    font-size: 15px
+
+@media only screen and (max-width: 850px)
+    .team-member-wrapper
+        width: 50%
+
+@media only screen and (max-width: 650px)
+    .team-member-wrapper
+        width: 100%

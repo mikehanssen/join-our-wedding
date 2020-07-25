@@ -1,12 +1,13 @@
 .header
     background-color: #FCF1ED
-    height: 64px
+    height: 128px
     display: flex
     align-items: center
     position: sticky
     width: 100%
     top: 0
     overflow: hidden
+    flex-direction: column
     z-index: 5
 
 .menu-icon-wrapper
@@ -26,8 +27,19 @@
     padding-top: 120px
     z-index: 10
     box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.1)
+
     .menu-open &
         transform: translateX(0)
+
+.header-menu
+    display: flex
+    flex-direction: row
+    width: 100%
+    justify-content: center
+    .link-text
+        color: #163045
+    .m--active
+        text-decoration: underline
 
 .top, .middle, .bottom
     height: 2px
@@ -76,11 +88,12 @@
     cursor: pointer
     margin-right: 15px
 
-.logo
-    position: absolute
-    left: 50%
-    top: 50%
-    transform: translate(-50%, -50%)
+.logo-container
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 64px
+    width: 100%
 
 .menu-link
     display: flex
@@ -90,9 +103,22 @@
     height: 50px
     padding-left: 60px
 
-.link-text
-    transform: translateX(0)
-    transition: transform 0.3s
-    pointer-events: none
-    .m--active &
-        transform: translateX(-20px)
+@media only screen and (min-width: 920px)
+    .toggle-menu
+        display: none
+
+@media only screen and (max-width: 920px)
+    .header-menu
+        display: none
+
+    .link-text
+        transform: translateX(0)
+        transition: transform 0.3s
+        pointer-events: none
+        .m--active &
+            transform: translateX(-20px)
+
+    .header
+        height: 64px
+        flex-direction: row
+
