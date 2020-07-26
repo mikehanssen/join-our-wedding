@@ -100,7 +100,19 @@ export default function GiftTips() {
               </div>
             </div>
           </div>
-          <div className="gift-wrapper" />
+          <div className="gift-wrapper">
+            <div className="gift-tip">
+              <img className="gift-tip-img" src="/img/clocktower.png" alt="" />
+              <div className="gift-tip-content">
+                <div className="gif-tip-title">Blood On The Clocktower</div>
+                <div className="gift-tip-description">Om de quarantine avonden mee door te komen.</div>
+              </div>
+              <div className="hearts">
+                <img src="/img/heart.svg" alt="" />
+                <img src="/img/heart.svg" alt="" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div className="flowers-bottom"></div>

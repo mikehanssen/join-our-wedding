@@ -1,4 +1,4 @@
-export default async (...args) => {
+const fetchGuest = async (...args) => {
   const headers = {
     Authorization: `Bearer ${args[0]}`,
   };
@@ -11,4 +11,21 @@ export default async (...args) => {
       console.log(`Error: ${err}`);
       return {};
     });
+};
+
+const updateGuest = async (rsvpCode, data) => {
+  const headers = {
+    Authorization: `Bearer ${rsvpCode}`,
+    'Content-Type': 'application/json',
+  };
+  return fetch('/api/rsvp', {
+    headers,
+    method: 'PATCH',
+    body: JSON.stringify(data),
+  });
+};
+
+export {
+  fetchGuest,
+  updateGuest,
 };

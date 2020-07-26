@@ -79,6 +79,24 @@ body
 .rsvp-header
     letter-spacing: 6px
 
+.desktop-table
+    a
+        color: #163045
+    tr td:first-child
+        width: 60px
+        text-align: left
+    tr td:nth-child(2)
+        width: 40px
+        text-align: center
+    tr td:nth-child(3)
+        text-align: left
+
+.m-hidden
+    display: block
+
+.d-hidden
+    display: none
+
 @media only screen and (max-width: 920px)
     .flowers-bottom
         height: 160px
@@ -87,3 +105,8 @@ body
     .flowers-right
         padding-right: 0 !important
 
+@media only screen and (max-width: 800px)
+    .m-hidden
+        display: none
+    .d-hidden
+        display: block

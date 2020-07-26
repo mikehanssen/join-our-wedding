@@ -1,8 +1,8 @@
 import useSWR from 'swr';
-import guestFetcher from '../libs/api-guest';
+import { fetchGuest } from '../libs/api-guest';
 
 export default function useGuest(rsvpCode) {
-  const { data, error } = useSWR(rsvpCode, guestFetcher);
+  const { data, error } = useSWR(rsvpCode, fetchGuest);
 
   return {
     guest: data,
