@@ -8,8 +8,9 @@ const fetchGuest = async (...args) => {
     .then((res) => res.json())
     .then((json) => json)
     .catch((err) => {
-      console.log(`Error: ${err}`);
-      return {};
+      const error = new Error('Guest not found!');
+      error.status = 404;
+      throw error;
     });
 };
 
