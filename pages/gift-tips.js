@@ -2,7 +2,7 @@ import Layout from '../components/layout';
 
 export default function GiftTips() {
   return (
-    <Layout>
+    <Layout pageTitle="Cadeautips">
       <div className="content content-center mb-100">
         <h1 className="title mt-60">
           Cadeautips

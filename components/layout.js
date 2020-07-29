@@ -1,11 +1,20 @@
 import Head from 'next/head';
 import { useState } from 'react';
+import Link from 'next/link';
+import { useSwipeable, Swipeable } from 'react-swipeable';
 import MobileMenu from './mobile-menu';
 import HeaderMenu from './header-menu';
-import Link from 'next/link';
 
 export default function Layout({ children, className = undefined, pageTitle = 'Home' }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const handlers = useSwipeable({
+    onSwipedLeft: (eventData) => {
+      setMenuOpen(false);
+    },
+    onSwipedRight: (eventData) => {
+      setMenuOpen(true);
+    },
+  });
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -16,7 +25,9 @@ export default function Layout({ children, className = undefined, pageTitle = 'H
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="" />
-        <title>K & M | {pageTitle}</title>
+        <title>
+          {`K & M | ${pageTitle}`}
+        </title>
       </Head>
       <header className="header">
         <Link href="/">
@@ -31,10 +42,10 @@ export default function Layout({ children, className = undefined, pageTitle = 'H
             <span className="bottom" />
           </span>
         </button>
-        <HeaderMenu menuOpen={menuOpen}/>
+        <HeaderMenu menuOpen={menuOpen} />
       </header>
-      <MobileMenu menuOpen={menuOpen}/>
-      <main>{children}</main>
+      <MobileMenu menuOpen={menuOpen} />
+      <main {...handlers}>{children}</main>
       <footer className="footer">
         <a href="" className="footer-link">Contact us</a>
         <div className="mt-20">Kayleigh & Mike</div>

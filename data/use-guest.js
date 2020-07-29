@@ -3,7 +3,6 @@ import { fetchGuest } from '../libs/api-guest';
 
 export default function useGuest(rsvpCode) {
   const { data, mutate, error } = useSWR(rsvpCode, fetchGuest);
-  console.log(error);
 
   return {
     guest: data,

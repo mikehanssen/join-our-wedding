@@ -3,7 +3,7 @@ import Layout from '../components/layout';
 
 export default function PracticalInformation() {
   return (
-    <Layout>
+    <Layout pageTitle="Praktische informatie">
       <div className="content content-center mb-100">
         <h1 className="title mt-60">
           Praktische informatie

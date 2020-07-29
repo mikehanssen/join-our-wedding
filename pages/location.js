@@ -2,7 +2,7 @@ import Layout from '../components/layout';
 
 export default function Location() {
   return (
-    <Layout>
+    <Layout pageTitle="Locatie">
       <div className="content location-content text-left mt-80 mb-100">
         <div className="content content-center">
           <h1 className="title left-title">
@@ -49,11 +49,11 @@ export default function Location() {
               </tr>
               <tr>
                 <td>Telefoon:</td>
-                <td>+31(0)251-257025</td>
+                <td><a href="tel:310251257025">+31(0)251-257025</a></td>
               </tr>
               <tr>
                 <td>E-mail:</td>
-                <td>info@hotel-marquette.com</td>
+                <td><a href="mailto:info@hotel-marquette.com">info@hotel-marquette.com</a></td>
               </tr>
             </table>
             <h2 className="subtitle">

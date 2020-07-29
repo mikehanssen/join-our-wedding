@@ -2,7 +2,7 @@ import Layout from '../components/layout';
 
 export default function Team() {
   return (
-    <Layout>
+    <Layout pageTitle="Het Team">
       <h1 className="title mt-60">
         Het team
       </h1>
@@ -20,12 +20,14 @@ export default function Team() {
               <div className="team-member-name">Patricia Meles</div>
               <div className="team-member-function">ceremoniemeester</div>
               <p className="team-member-description">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-                Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-                amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-                gubergren, no sea takimata
+                Zonder een goede ceremoniemeester zou deze dag zeker in de soep gaan lopen.
+                Want als er iets is wat wij (M&K) goed kunnen dan is het wel uitstellen.
+                Op het moment dat wij over een ceremoniemeester aan het nadenken waren was er eigenlijk
+                maar één logische keuze. Patricia! Er is eigenlijk niemand die dingen beter kan
+                regelen dan Patricia. Alles wordt altijd tot in de details uitgewerkt en
+                tot in de uiterste nauwkeurigheid. Gelukkig aarzelde Patricia geen moment toen
+                zij gevraagd werd als ceremoniemeester en gaf zij Kayleigh & Mike meteen "huiswerk"
+                om te regelen!
               </p>
             </div>
           </div>

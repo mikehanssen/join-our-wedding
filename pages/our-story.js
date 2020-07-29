@@ -2,7 +2,7 @@ import Layout from '../components/layout';
 
 export default function OurStory() {
   return (
-    <Layout>
+    <Layout pageTitle="Our Story">
       <div className="content our-story-content flowers-right mt-80 mb-100">
         <h1 className="title">
           Ons verhaal
