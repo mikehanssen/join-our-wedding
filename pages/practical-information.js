@@ -18,6 +18,10 @@ export default function PracticalInformation() {
               <p className="practical-info-description">
                 Neem even contact met ons op als je graag iemand mee wilt nemen, dan kunnen wij kijken of er nog ruimte is voor iemand extra.
               </p>
+              <div className="practical-info-title mt-30">Zijn kinderen welkom tijdens de bruiloft?</div>
+              <p className="practical-info-description">
+                Ook al vinden wij kinderen heel gezellig! Wij hebben ervoor gekozen om deze dag zonder hen te beleven.
+              </p>
             </div>
           </div>
           <div className="practical-info-wrapper">
