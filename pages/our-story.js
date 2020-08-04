@@ -40,8 +40,8 @@ export default function OurStory() {
           Het zou teveel zijn om hier te omschrijven maar de afgelopen 12 jaar waren één en al feest. Van
           een eurotrip tot een whisky tasting in Schotland. Er zijn genoeg verhalen te vertellen tijdens
           een ceremonie en een feest. Wij hopen dat jij deze speciale dag met ons kan gaan delen. En mocht
-          je één van onze legendarische avonturen willen horen dan adviseren wij je te vragen naar het
-          de quest van de hommels in het donker.
+          je één van onze legendarische avonturen willen horen dan adviseren wij je te vragen naar het verhaal
+          van de quest "Hommels after Dark".
         </p>
       </div>
     </Layout>

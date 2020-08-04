@@ -76,7 +76,7 @@ export default function RSVP() {
                     <input type="hidden" name="fake" ref={register} />
                     <div className="input-container checkbox-container">
                       <input type="checkbox" id="attends" name="attends" defaultChecked={guest.attends} ref={register} />
-                      <label htmlFor="attends">Kom je naar de bruiloft?</label>
+                      <label htmlFor="attends">Wij/Ik kom(en) naar de bruiloft!</label>
                     </div>
                     <div className="input-container">
                       <label htmlFor="phone_number">

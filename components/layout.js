@@ -49,7 +49,12 @@ export default function Layout({ children, className = undefined, pageTitle = 'H
       <footer className="footer">
         <a href="" className="footer-link">Contact us</a>
         <div className="mt-20">Kayleigh & Mike</div>
+        <div className="footer-contact"><a href="https://wa.me/0611157532">06 111 57 532</a></div>
+        <div className="footer-contact"><a href="mailto:happycouple@join-our.wedding">happycouple@join-our.wedding</a></div>
         <div className="mt-20">ceremoniemeester | patricia</div>
+        <div className="footer-contact"><a href="https://wa.me/0612759512">06 127 59 512</a></div>
+        <div className="footer-contact"><a href="mailto:happycouple@join-our.wedding">ceremoniemeester@join-our.wedding</a></div>
+        {/*<div className="mt-20">ceremoniemeester@join-our.wedding | +31 6 12759512</div>*/}
         <img className="mt-80 footer-logo" src="/img/logo.svg" alt="Footer logo" />
       </footer>
     </div>

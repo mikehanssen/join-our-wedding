@@ -62,16 +62,15 @@ export default function Team() {
           </div>
           <div className="team-member-wrapper">
             <div className="team-member mt-60">
-              <img className="team-member-img" src="/img/bionda.jpg" alt="" />
+              <img className="team-member-img" src="/img/bionda.jpeg" alt="" />
               <div className="team-member-name">Bionda Brinks- van der plas</div>
               <div className="team-member-function">getuige</div>
               <p className="team-member-description">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-                Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-                amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-                gubergren, no sea takimata
+                Gwen zal ongetwijfeld gek van mij zijn geworden toen we nog klein waren. Stiekem pikte ik wel eens haar
+                haarproducten en ik herinner mij nog goed hoe wij samen films keken op haar kamer. Als een klein meisje
+                is een grote zus de persoon die je altijd beschermd. Behalve dan tegen haarzelf, want zij heeft wel het
+                enige recht, samen met mijn broer Twan, om mij te pesten. Daarom vertrouw ik ook op haar om er getuige
+                van te zijn de rol van beschermer over te dragen aan Mike!
               </p>
             </div>
           </div>
@@ -81,12 +80,11 @@ export default function Team() {
               <div className="team-member-name">Gwen Settelaar</div>
               <div className="team-member-function">getuige</div>
               <p className="team-member-description">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-                Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-                amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-                gubergren, no sea takimata
+                Als er al iemand bestemd was om één van mijn beste vriendinnen ooit te worden dan is dat zonder twijfel
+                Bionda. Onze moeders waren al besties voor wij ook maar waren geboren en stiekem is Bionda daarom ook
+                gewoon een extra zus. Als babies deelde wij vroeger alles al samen. En soms zien wij elkaar een tijdje
+                niet, maar zodra wij dan weer samen zijn is het alsof er geen tijd is verstreken. Als er iets is kan ik
+                altijd bij haar terecht en vice versa. Een baby bestie die ik maar gelukkig mag prijzen als mijn getuige.
               </p>
             </div>
           </div>

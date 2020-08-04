@@ -59,7 +59,7 @@ export default function Location() {
             <h2 className="subtitle">
               Sweet dreams
             </h2>
-            <p className="mt-20">
+            <p className="mt-20 fs-15">
               Op het landgoed bevind zich tevens het hotel Château Marquette. Het hotel is op loopafstand en dus ideaal voor
               iedereen die na het feesten lekker wil ontspannen in een hotelkamer om de volgende dag te beginnen met een
               lekker ontbijtje.
