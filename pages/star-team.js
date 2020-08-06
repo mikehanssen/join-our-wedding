@@ -46,7 +46,7 @@ export default function Team() {
             </div>
           </div>
           <div className="team-member-wrapper">
-            <div className="team-member mt-60">
+            <divgif-tip-title className="team-member mt-60">
               <img className="team-member-img" src="/img/martin.jpg" alt="" />
               <div className="team-member-name">Martin Hanssen</div>
               <div className="team-member-function">getuige</div>
@@ -58,7 +58,7 @@ export default function Team() {
                 'savonds laat was hij aan het klussen. Dus op het moment dat Mike hem vroeg als getuige deed hij dat ook
                 met alle liefde, het was gewoon nog een extra klusje voor op de lijst!
               </p>
-            </div>
+            </divgif-tip-title>
           </div>
           <div className="team-member-wrapper">
             <div className="team-member mt-60">

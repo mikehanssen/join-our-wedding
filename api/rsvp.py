@@ -38,6 +38,7 @@ class Guests(db.Model):
     access_code = db.Column(db.String(), unique=True)
     name = db.Column(db.String())
     attends = db.Column(db.Boolean(), default=False)
+    replied = db.Column(db.Boolean(), default=False)
     plus_one = db.Column(db.Boolean(), default=False)
     plus_one_name = db.Column(db.String(), nullable=True)
     plus_one_allowed = db.Column(db.Boolean(), default=False)
@@ -71,6 +72,8 @@ class Guests(db.Model):
         for key, value in data.items():
             if key in self.UPDATE_ALLOWED:
                 setattr(self, key, value)
+        # We modify the replied status one time.
+        self.replied = True
         db.session.add(self)
         return db.session.commit()
 

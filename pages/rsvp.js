@@ -67,6 +67,7 @@ export default function RSVP() {
                       <span className="letter">E</span>
                       <span className="letter">R</span>
                     </button>
+                    <p className="fts-18 rsvp-header mt-50 mb-40">* Je persoonlijke code vind je achterop de kaart</p>
                   </>
                 ) : (
                   <>
