@@ -38,14 +38,16 @@ class Guests(db.Model):
     access_code = db.Column(db.String(), unique=True)
     name = db.Column(db.String())
     attends = db.Column(db.Boolean(), default=False)
+    does_not_attends = db.Column(db.Boolean(), default=False)
     replied = db.Column(db.Boolean(), default=False)
     plus_one = db.Column(db.Boolean(), default=False)
     plus_one_name = db.Column(db.String(), nullable=True)
+    invited_to = db.Column(db.String(), nullable=True)
     plus_one_allowed = db.Column(db.Boolean(), default=False)
     phone_number = db.Column(db.String(), nullable=True)
 
     UPDATE_ALLOWED = [
-        'attends', 'phone_number', 'plus_one', 'plus_one_name'
+        'attends', 'does_not_attends', 'phone_number', 'plus_one', 'plus_one_name'
     ]
 
     def to_json(self) -> Dict[str, Any]:
@@ -57,6 +59,8 @@ class Guests(db.Model):
             'id': self.id,
             'name': self.name,
             'attends': self.attends,
+            'does_not_attends': self.does_not_attends,
+            'invited_to': self.invited_to,
             'plus_one_allowed': self.plus_one_allowed,
             'plus_one': self.plus_one,
             'plus_one_name': self.plus_one_name,

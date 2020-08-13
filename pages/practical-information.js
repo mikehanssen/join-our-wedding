@@ -72,6 +72,18 @@ export default function PracticalInformation() {
               </p>
             </div>
           </div>
+          <div className="practical-info-wrapper">
+            <div className="practical-info mt-60">
+              <div className="practical-info-img-wrapper">
+                {/*<img className="practical-info-img" src="/img/washhands.svg" alt="" />*/}
+              </div>
+              <div className="practical-info-title">Dresscode (Klassiek)</div>
+              <p className="practical-info-description">
+                Voor de mannen nemen wij hier het advies van Brigitte over (Mike zijn tailor). Kies voor een keurig donkerblauw pak, met de perfecte pasvorm, hierdoor kun je een net overhemd dragen met een bijpassende das, tot slot
+                is een pochet zeker op zijn plaats en natuurlijk net gepoetste herenschoenen.
+              </p>
+            </div>
+          </div>
           <div className="practical-info-wrapper" />
         </div>
       </div>

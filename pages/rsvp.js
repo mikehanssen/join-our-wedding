@@ -22,6 +22,9 @@ export default function RSVP() {
       setGuestRsvpCode(data.rsvpCode);
     } else {
       setIsSaving(true);
+      // TODO: Fix this
+      data.attends = data.attends === 'attends';
+      data.does_not_attends = !data.attends;
       updateGuest(guestRsvpCode, data)
         .then((res) => res.json())
         .then((json) => {
@@ -71,13 +74,20 @@ export default function RSVP() {
                   </>
                 ) : (
                   <>
-                    <p className="fts-24 rsvp-header mt-50 mb-40">
+                    <p className="fts-24 rsvp-header mt-50 mb-10">
                       {`Welkom ${guest.name}`}
+                    </p>
+                    <p className="fts-18 rsvp-header mt-10 mb-40">
+                      { guest.invited_to }
                     </p>
                     <input type="hidden" name="fake" ref={register} />
                     <div className="input-container checkbox-container">
-                      <input type="checkbox" id="attends" name="attends" defaultChecked={guest.attends} ref={register} />
+                      <input type="radio" id="attends" value="attends" name="attends" defaultChecked={guest.attends} ref={register} />
                       <label htmlFor="attends">Wij/Ik kom(en) naar de bruiloft!</label>
+                    </div>
+                    <div className="input-container checkbox-container">
+                      <input type="radio" id="does_not_attends" value="does_not_attends" name="attends" defaultChecked={guest.does_not_attends} ref={register} />
+                      <label htmlFor="does_not_attends">Wij/Ik kom(en) helaas niet naar de bruiloft!</label>
                     </div>
                     <div className="input-container">
                       <label htmlFor="phone_number">
