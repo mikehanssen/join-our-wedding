@@ -24,8 +24,8 @@ export default function OurStory() {
           Na flink wat Hyves stalken en elkaar tegenkomen op school besloot Kayleigh een film avond te
           organiseren voor vrienden en Mike ook uit te nodigen. Nadat één vriend had afgezegt besloot
           Kayleigh dat het maar beter zou zijn om de filmavond niet door te laten gaan, en belde zij
-          iedereen af. Tot op de dag van vandaag is het nog steeds onduidelijk of zij Mike met opzet is
-          vergeten af te zeggen of dat dit onderdeel was van een meesterlijk plan, dit is een geheim
+          iedereen af. Tot op de dag van vandaag is het nog steeds onduidelijk of zij Mike per ongeluk is
+          vergeten niet af te zeggen of dat dit onderdeel was van een meesterlijk plan, dit is een geheim
           wat nooit iemand te weten zal komen.
         </p>
         <p className="text-left">
