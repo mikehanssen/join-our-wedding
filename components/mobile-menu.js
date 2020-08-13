@@ -47,6 +47,11 @@ export default function MobileMenu({ menuOpen = false }) {
             <span className="link-text">cadeautips</span>
           </a>
         </Link>
+        <Link href="/agenda">
+          <a className={activeUrl === '/agenda' ? 'menu-link m--active' : 'menu-link'}>
+            <span className="link-text">agenda</span>
+          </a>
+        </Link>
       </div>
     </div>
   );
