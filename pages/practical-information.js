@@ -57,7 +57,7 @@ export default function PracticalInformation() {
               </div>
               <div className="practical-info-title">Hebben jullie nog speciale cadeau wensen?</div>
               <p className="practical-info-description">
-                We vinden het al fijn als jullie deze mooie dag met ons willen delen. Als je daarnaast ook een cadeau of geld wil geven kijk dan even bij onze <Link href="/gift-tips"><a className="color-red">cadeautips</a></Link>.
+                We vinden het al fijn als jullie deze mooie dag met ons willen delen. Als je daarnaast ook een cadeau of geld wil geven kijk dan even bij onze <Link href="/gift-tips"><a className="color-red">cadeautips</a></Link>. Je kan altijd contact opnemen met de ceremoniemeester als je een cadeau samen met andere gasten wilt geven.
               </p>
             </div>
           </div>
@@ -75,12 +75,16 @@ export default function PracticalInformation() {
           <div className="practical-info-wrapper">
             <div className="practical-info mt-60">
               <div className="practical-info-img-wrapper">
-                {/*<img className="practical-info-img" src="/img/washhands.svg" alt="" />*/}
+                <img className="practical-info-img" src="/img/dresscode.svg" alt="" />
               </div>
               <div className="practical-info-title">Dresscode (Klassiek)</div>
               <p className="practical-info-description">
                 Voor de mannen nemen wij hier het advies van Brigitte over (Mike zijn tailor). Kies voor een keurig donkerblauw pak, met de perfecte pasvorm, hierdoor kun je een net overhemd dragen met een bijpassende das, tot slot
                 is een pochet zeker op zijn plaats en natuurlijk net gepoetste herenschoenen.
+              </p>
+              <div className="practical-info-title mt-20">Vrouwen (Black-tie)</div>
+              <p className="practical-info-description">
+                Voor de vrouwen denk aan een (lange) avondjurk of een nette cocktailjurk. Als je dinergast bent, dien je in een lange jurk te komen. Kies voor een bescheiden decolleté en maak je outfit - als je dat wilt - af met een chique clutch.
               </p>
             </div>
           </div>
