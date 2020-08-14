@@ -82,8 +82,7 @@ export default function PracticalInformation() {
                 Voor de mannen nemen wij hier het advies van Brigitte over (Mike zijn tailor). Kies voor een keurig donkerblauw pak, met de perfecte pasvorm, hierdoor kun je een net overhemd dragen met een bijpassende das, tot slot
                 is een pochet zeker op zijn plaats en natuurlijk net gepoetste herenschoenen.
               </p>
-              <div className="practical-info-title mt-20">Vrouwen (Black-tie)</div>
-              <p className="practical-info-description">
+              <p className="practical-info-description mt-20">
                 Voor de vrouwen denk aan een (lange) avondjurk of een nette cocktailjurk. Als je dinergast bent, dien je in een lange jurk te komen. Kies voor een bescheiden decolleté en maak je outfit - als je dat wilt - af met een chique clutch.
               </p>
             </div>
