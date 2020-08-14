@@ -45,9 +45,11 @@ class Guests(db.Model):
     invited_to = db.Column(db.String(), nullable=True)
     plus_one_allowed = db.Column(db.Boolean(), default=False)
     phone_number = db.Column(db.String(), nullable=True)
+    notes = db.Column(db.Text(), nullable=True)
 
     UPDATE_ALLOWED = [
-        'attends', 'does_not_attends', 'phone_number', 'plus_one', 'plus_one_name'
+        'attends', 'does_not_attends', 'phone_number', 'plus_one',
+        'plus_one_name', 'notes'
     ]
 
     def to_json(self) -> Dict[str, Any]:
@@ -64,7 +66,8 @@ class Guests(db.Model):
             'plus_one_allowed': self.plus_one_allowed,
             'plus_one': self.plus_one,
             'plus_one_name': self.plus_one_name,
-            'phone_number': self.phone_number
+            'phone_number': self.phone_number,
+            'notes': self.notes
         }
 
     def patch(self, data: Dict[str, Any]) -> bool:

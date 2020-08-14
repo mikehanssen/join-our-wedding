@@ -112,6 +112,12 @@ export default function RSVP() {
                       )}
                     </>
                     )}
+                    <div className="input-container">
+                      <label htmlFor="notes">
+                        Laat een boodschap/opmerking achter voor het bruidspaar.
+                      </label>
+                      <textarea name="notes" id="notes" defaultValue={guest.notes} ref={register} />
+                    </div>
                     <button type="submit" className="btn-primary m--yellow mt-80">
                       <span className="letter">S</span>
                       <span className="letter">A</span>
