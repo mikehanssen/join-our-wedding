@@ -12,7 +12,7 @@ export default function Home() {
           date
         </div>
         <div className="names">Kayleigh & Mike</div>
-        <div className="clip-text clip-text_one">02.10.20</div>
+        <div className="clip-text clip-text_one">02.10.21</div>
         <Link href="/rsvp">
           <a className="btn-primary mt-80">
             <span className="letter">R</span>
@@ -23,7 +23,7 @@ export default function Home() {
         </Link>
       </div>
       <div className="mike-kayleigh-wrapper mt-100">
-        <img src="/img/mike-kayleigh.jpg" className="mike-kayleigh-img" alt="" />
+        <img src="/img/mike-kayleigh-2.jpg" className="mike-kayleigh-img" alt="" />
       </div>
     </Layout>
   );

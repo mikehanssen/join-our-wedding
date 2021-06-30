@@ -17,7 +17,7 @@ auth = HTTPTokenAuth(scheme='Bearer')
 
 # Set config vars
 app.config['SQLALCHEMY_DATABASE_URI'] = \
-    os.environ.get('DATABASE_URL', 'postgres://wedding@127.0.0.1/wedding')
+    os.environ.get('DATABASE_URL', 'postgresql://wedding@127.0.0.1/wedding')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Initialize SQLAlchemy
