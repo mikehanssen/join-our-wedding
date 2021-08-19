@@ -9,6 +9,7 @@ export default function RSVP() {
   const [inputRsvpCode, setInputRsvpCode] = useState('');
   const [guestRsvpCode, setGuestRsvpCode] = useState('');
   const [isSaving, setIsSaving] = useState(false);
+  const [notification, setNotification] = useState(undefined);
   const {
     guest, isLoading, mutate, isError,
   } = useGuest(guestRsvpCode);
@@ -30,8 +31,12 @@ export default function RSVP() {
         .then((json) => {
           mutate(json);
           setIsSaving(false);
+          setNotification('Bedankt! Alle info is opgeslagen!');
         })
-        .catch((err) => ({}));
+        .catch((err) => {
+          console.log(err);
+          setNotification('Er is wat fout gegaan! Stuur Mike even een berichtje.');
+        });
     }
   };
 
@@ -80,6 +85,11 @@ export default function RSVP() {
                     <p className="fts-18 rsvp-header mt-10 mb-40">
                       { guest.invited_to }
                     </p>
+                    {notification &&
+                      <div className="rsvp-notification">
+                        {notification}
+                      </div>
+                    }
                     <input type="hidden" name="fake" ref={register} />
                     <div className="input-container checkbox-container">
                       <input type="radio" id="attends" value="attends" name="attends" defaultChecked={guest.attends} ref={register} />

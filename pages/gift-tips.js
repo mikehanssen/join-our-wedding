@@ -76,19 +76,6 @@ export default function GiftTips() {
           </div>
           <div className="gift-wrapper">
             <div className="gift-tip">
-              <img className="gift-tip-img" src="/img/hanging-clothes.jpg" alt="" />
-              <div className="gift-tip-content">
-                <div className="gift-tip-title">Samsung DV80M5210QW</div>
-                <div className="gift-tip-description">Zodat de waslijn eingelijk weg kan!</div>
-              </div>
-              <div className="hearts">
-                <img src="/img/heart.svg" alt="" />
-                <img src="/img/heart.svg" alt="" />
-              </div>
-            </div>
-          </div>
-          <div className="gift-wrapper">
-            <div className="gift-tip">
               <img className="gift-tip-img" src="/img/distillery.jpg" alt="" />
               <div className="gift-tip-content">
                 <div className="gift-tip-title">LAPHROAIG 1815 LEGACY EDITION</div>
@@ -102,13 +89,12 @@ export default function GiftTips() {
           </div>
           <div className="gift-wrapper">
             <div className="gift-tip">
-              <img className="gift-tip-img" src="/img/clocktower.png" alt="" />
+              <img className="gift-tip-img" src="/img/present.jpg" alt="" />
               <div className="gift-tip-content">
-                <div className="gift-tip-title">Blood On The Clocktower</div>
-                <div className="gift-tip-description">Om de quarantine avonden mee door te komen.</div>
+                <div className="gift-tip-title">Eigen ideeen?</div>
+                <div className="gift-tip-description">Neem contact op met de ceremoniemeester of verras ons.</div>
               </div>
               <div className="hearts">
-                <img src="/img/heart.svg" alt="" />
                 <img src="/img/heart.svg" alt="" />
               </div>
             </div>

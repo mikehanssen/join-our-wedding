@@ -64,11 +64,14 @@ export default function PracticalInformation() {
           <div className="practical-info-wrapper">
             <div className="practical-info mt-60">
               <div className="practical-info-img-wrapper">
-                <img className="practical-info-img" src="/img/washhands.svg" alt="" />
+                <img className="practical-info-img" src="/img/dresscode.svg" alt="" />
               </div>
-              <div className="practical-info-title">Hoe worden de regels van covid-19 toegepast?</div>
+              <div className="practical-info-title">Dresscode Dames (Tenue de ville)</div>
               <p className="practical-info-description">
-                Er zijn meerder ruimtes waar je je even kan terugtrekken, ook zijn er meerdere plekken op de locatie waar je je handen kan desinfecteren. Daarnaast vragen we jullie zelf een beetje de 1,5 meter in acht te houden.
+                Voor de vrouwen denk aan een (lange) avondjurk of een nette cocktailjurk, of zoek even wat voorbeelden op van Tenue de ville outfits.
+              </p>
+              <p className="practical-info-description mt-20">
+                Als je dinergast bent, zouden wij het fijn vinden als je in een lange jurk komt (of een mooie powersuit natuurlijk). Kies voor een bescheiden decolleté en maak je outfit - als je dat wilt - af met een chique clutch.
               </p>
             </div>
           </div>
@@ -77,13 +80,25 @@ export default function PracticalInformation() {
               <div className="practical-info-img-wrapper">
                 <img className="practical-info-img" src="/img/dresscode.svg" alt="" />
               </div>
-              <div className="practical-info-title">Dresscode (Klassiek)</div>
+              <div className="practical-info-title">Dresscode Heren (Tenue de ville)</div>
               <p className="practical-info-description">
-                Voor de mannen nemen wij hier het advies van Brigitte over (Mike zijn tailor). Kies voor een keurig donkerblauw pak, met de perfecte pasvorm, hierdoor kun je een net overhemd dragen met een bijpassende das, tot slot
-                is een pochet zeker op zijn plaats en natuurlijk net gepoetste herenschoenen.
+                Als je daggast bent, wordt een pak zeer gewaardeerd en nemen wij hier het advies van Brigitte over (Mike zijn tailor). Kies voor een keurig (donkerblauw) pak, met de perfecte pasvorm, hierdoor kun je een net overhemd dragen met een bijpassende das, tot slot
+                is een pochet zeker op zijn plaats en natuurlijk net gepoetste herenschoenen. Let op dat je geen drie-deling pak aantrekt op deze dag.
               </p>
               <p className="practical-info-description mt-20">
-                Voor de vrouwen denk aan een (lange) avondjurk of een nette cocktailjurk. Als je dinergast bent, dien je in een lange jurk te komen. Kies voor een bescheiden decolleté en maak je outfit - als je dat wilt - af met een chique clutch.
+                Mocht je jezelf niet fijn voelen in een pak of enkel als avondgast deze mooie dag met ons delen denk aan een net overhemd in combinatie met een nette broek en mooie herenschoenen.
+              </p>
+            </div>
+          </div>
+          <div className="practical-info-wrapper" />
+          <div className="practical-info-wrapper">
+            <div className="practical-info mt-60">
+              <div className="practical-info-img-wrapper">
+                <img className="practical-info-img" src="/img/washhands.svg" alt="" />
+              </div>
+              <div className="practical-info-title">Hoe worden de regels van covid-19 toegepast?</div>
+              <p className="practical-info-description">
+                Er zijn meerder ruimtes waar je je even kan terugtrekken, ook zijn er meerdere plekken op de locatie waar je je handen kan desinfecteren. Daarnaast vragen we jullie zelf een beetje de 1,5 meter in acht te houden.
               </p>
             </div>
           </div>

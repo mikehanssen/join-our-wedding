@@ -12,8 +12,26 @@ export default function Team() {
           When, What, Where? (Coming soon).
         </h2>
       </div>
-      <div className="content content-center mb-100">
-      </div>
+      {/*<div className="content agenda-content content-center mb-100">*/}
+      {/*  <h2 className="subtitle mb-30">*/}
+      {/*    De ceremonie*/}
+      {/*  </h2>*/}
+      {/*  <p className="text-left">*/}
+      {/*    Aanvang 14:00, start ceremonie om 14:30.*/}
+      {/*  </p>*/}
+      {/*  <h2 className="subtitle mb-30">*/}
+      {/*    Het diner*/}
+      {/*  </h2>*/}
+      {/*  <p className="text-left">*/}
+      {/*    ...*/}
+      {/*  </p>*/}
+      {/*  <h2 className="subtitle mb-30">*/}
+      {/*    Het feest*/}
+      {/*  </h2>*/}
+      {/*  <p className="text-left">*/}
+      {/*    ...*/}
+      {/*  </p>*/}
+      {/*</div>*/}
       <div className="boquete-flowers-bottom"></div>
     </Layout>
   );
