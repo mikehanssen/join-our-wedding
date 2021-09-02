@@ -1,16 +1,25 @@
-form, .input-container
+form
   display: flex
   flex-direction: column
   align-items: center
 
 .input-container
+  display: flex
+  flex-direction: column
   margin: 20px 0
+  &:first-of-type
+    margin-top: 0
+  input[type=radio]
+    margin-right: 10px
+    height: 20px
 
 label
   font-family: "Times New Roman", serif
   font-size: 18px
   max-width: 350px
   display: block
+  margin-bottom: 10px
+  text-align: left
 
 input, textarea
   font-size: 18px
@@ -19,10 +28,12 @@ input, textarea
   border: 0
   padding: 10px
 
+input[type=text], textarea
+  max-width: 350px
+  width: 100%
+
 textarea
-  width: 350px
   height: 150px
-  margin-top: 25px
 
 .checkbox-container
   flex-direction: row
@@ -31,3 +42,62 @@ textarea
   input[type=checkbox]
     margin-right: 25px
     display: inline-block
+
+.form-images
+  display: flex
+  flex-direction: column
+  align-items: end
+  flex-grow: 1
+  img
+    max-width: 200px
+    margin-bottom: 25px
+    border-radius: 3px
+
+.form-container
+  display: flex
+  max-width: 680px
+  width: 100%
+  .form
+    flex-grow: 0
+    max-width: 350px
+    width: 100%
+  i
+    color: #fff
+    text-align: left
+    max-width: 350px
+    margin-top: 10px
+    font-style: italic
+  h2
+    font-size: 24px
+    color: #fff
+    text-align: left
+    border-bottom: 2px solid #fff
+    max-width: 350px
+    margin-bottom: 15px
+
+.dinner-guest-container
+  text-align: left
+  margin-bottom: 20px
+  .guest-name
+    font-size: 20px
+    font-weight: bold
+  .input-container
+    margin-top: 5px
+    margin-bottom: 5px
+  .options-container
+    display: flex
+    input
+      margin-right: 10px
+    label
+      margin-right: 15px
+
+@media only screen and (max-width: 640px)
+  .form-container
+    flex-direction: column
+    align-items: center
+  .form-images
+    margin-top: 50px
+    flex-direction: row
+    img
+      width: 100%
+      margin-right: 10px

@@ -7,7 +7,7 @@ import { updateGuest } from '../libs/api-guest';
 
 export default function RSVP() {
   const [inputRsvpCode, setInputRsvpCode] = useState('');
-  const [guestRsvpCode, setGuestRsvpCode] = useState('');
+  const [guestRsvpCode, setGuestRsvpCode] = useState('66666');
   const [isSaving, setIsSaving] = useState(false);
   const [notification, setNotification] = useState(undefined);
   const {
@@ -23,7 +23,6 @@ export default function RSVP() {
       setGuestRsvpCode(data.rsvpCode);
     } else {
       setIsSaving(true);
-      // TODO: Fix this
       data.attends = data.attends === 'attends';
       data.does_not_attends = !data.attends;
       updateGuest(guestRsvpCode, data)
@@ -53,12 +52,13 @@ export default function RSVP() {
           </div>
         ) : (
           <>
-            {isSaving ? (
+            {isSaving &&
               <div className="loader">
                 <p className="fts-24 rsvp-header mt-50 mb-40">Wij zijn even de gegevens aan het opslaan!</p>
                 <img src="/img/spinner-white.svg" />
               </div>
-            ) : (
+            }
+            {!isSaving &&
               <form onSubmit={handleSubmit(onFormSubmit)}>
                 {!guest || !('name' in guest) ? (
                   <>
@@ -85,59 +85,116 @@ export default function RSVP() {
                     <p className="fts-18 rsvp-header mt-10 mb-40">
                       { guest.invited_to }
                     </p>
-                    {notification &&
+                    {notification && (
                       <div className="rsvp-notification">
                         {notification}
                       </div>
-                    }
-                    <input type="hidden" name="fake" ref={register} />
-                    <div className="input-container checkbox-container">
-                      <input type="radio" id="attends" value="attends" name="attends" defaultChecked={guest.attends} ref={register} />
-                      <label htmlFor="attends">Wij/Ik kom(en) naar de bruiloft!</label>
-                    </div>
-                    <div className="input-container checkbox-container">
-                      <input type="radio" id="does_not_attends" value="does_not_attends" name="attends" defaultChecked={guest.does_not_attends} ref={register} />
-                      <label htmlFor="does_not_attends">Wij/Ik kom(en) helaas niet naar de bruiloft!</label>
-                    </div>
-                    <div className="input-container">
-                      <label htmlFor="phone_number">
-                        In verband met COVID-19 en de onzekerheid die het met zich meebrengt
-                        vragen wij om je telefoonnummer zodat wij contact met je op kunnen nemen!
-                      </label>
-                      <input type="phone" name="phone_number" id="phone_number" defaultValue={guest.phone_number} ref={register} />
-                    </div>
-                    {guest.plus_one_allowed
-                    && (
-                    <>
-                      <div className="input-container checkbox-container">
-                        <input type="checkbox" id="plus_one" name="plus_one" defaultChecked={guest.plus_one} ref={register} />
-                        <label htmlFor="plus_one">Neem je een plus one mee?</label>
-                      </div>
-                      {((plusOne !== undefined && plusOne) || (plusOne === undefined && guest.plus_one))
-                      && (
-                        <div className="input-container">
-                          <label htmlFor="plus_one_name">Naam van je plus one?</label>
-                          <input type="phone" name="plus_one_name" id="plus_one_name" defaultValue={guest.plus_one_name} ref={register} />
-                        </div>
-                      )}
-                    </>
                     )}
-                    <div className="input-container">
-                      <label htmlFor="notes">
-                        Laat een boodschap/opmerking achter voor het bruidspaar.
-                      </label>
-                      <textarea name="notes" id="notes" defaultValue={guest.notes} ref={register} />
+                    <div className="form-container">
+                      <div className="form">
+                        <input type="hidden" name="fake" ref={register} />
+                        <div className="input-container checkbox-container">
+                          <input type="radio" id="attends" value="attends" name="attends" defaultChecked={guest.attends} ref={register} />
+                          <label htmlFor="attends">Wij/Ik kom(en) naar de bruiloft!</label>
+                        </div>
+                        <div className="input-container checkbox-container">
+                          <input type="radio" id="does_not_attends" value="does_not_attends" name="attends" defaultChecked={guest.does_not_attends} ref={register} />
+                          <label htmlFor="does_not_attends">Wij/Ik kom(en) helaas niet naar de bruiloft!</label>
+                        </div>
+                        <div className="input-container">
+                          <label htmlFor="phone_number">
+                            Telefoonnummer
+                          </label>
+                          <input type="text" name="phone_number" id="phone_number" defaultValue={guest.phone_number} ref={register} />
+                          <i>In verband met COVID-19 en de onzekerheid die het met zich meebrengt vragen wij om je telefoonnummer zodat wij contact met je op kunnen nemen!</i>
+                        </div>
+                        {guest.plus_one_allowed
+                        && (
+                        <>
+                          <div className="input-container checkbox-container">
+                            <input type="checkbox" id="plus_one" name="plus_one" defaultChecked={guest.plus_one} ref={register} />
+                            <label htmlFor="plus_one">Neem je een plus one mee?</label>
+                          </div>
+                          {((plusOne !== undefined && plusOne) || (plusOne === undefined && guest.plus_one))
+                          && (
+                            <div className="input-container">
+                              <label htmlFor="plus_one_name">Naam van je plus one?</label>
+                              <input type="phone" name="plus_one_name" id="plus_one_name" defaultValue={guest.plus_one_name} ref={register} />
+                            </div>
+                          )}
+                        </>
+                        )}
+                        <div className="input-container">
+                          <label htmlFor="notes">
+                            Laat een boodschap/opmerking achter voor het bruidspaar.
+                          </label>
+                          <textarea name="notes" id="notes" defaultValue={guest.notes} ref={register} />
+                        </div>
+
+                        <h2>Dinner wensen</h2>
+                        <div className="dinner-guest-container">
+                          <div className="input-container">
+                            <p className="guest-name">Guest 1</p>
+                            <div className="options-container">
+                              <input type="radio" id="vlees" value="vlees" name="dinner_preference" ref={register} />
+                              <label htmlFor="vlees">
+                                Vlees
+                              </label>
+                              <input type="radio" id="vis" value="vis" name="dinner_preference" ref={register} />
+                              <label htmlFor="vis">
+                                Vis
+                              </label>
+                              <input type="radio" id="vega" value="vega" name="dinner_preference" ref={register} />
+                              <label htmlFor="vega">
+                                Vega
+                              </label>
+                            </div>
+                          </div>
+                          <div className="input-container">
+                            <input type="text" id="special" value="" name="special" placeholder="Allergieen en Dieetwensen" ref={register} />
+                          </div>
+                        </div>
+
+                        <div className="dinner-guest-container">
+                          <div className="input-container">
+                            <p className="guest-name">Guest 2</p>
+                            <div className="options-container">
+                              <input type="radio" id="vlees" value="vlees" name="dinner_preference" ref={register} />
+                              <label htmlFor="vlees">
+                                Vlees
+                              </label>
+                              <input type="radio" id="vis" value="vis" name="dinner_preference" ref={register} />
+                              <label htmlFor="vis">
+                                Vis
+                              </label>
+                              <input type="radio" id="vega" value="vega" name="dinner_preference" ref={register} />
+                              <label htmlFor="vega">
+                                Vega
+                              </label>
+                            </div>
+                          </div>
+                          <div className="input-container">
+                            <input type="text" id="special" value="" name="special" placeholder="Allergieen en Dieetwensen" ref={register} />
+                          </div>
+                        </div>
+
+                        <button type="submit" className="btn-primary m--yellow mt-80">
+                          <span className="letter">S</span>
+                          <span className="letter">A</span>
+                          <span className="letter">V</span>
+                          <span className="letter">E</span>
+                        </button>
+                      </div>
+                      <div className="form-images">
+                        <img src="/img/square1-min.jpg" alt="" />
+                        <img src="/img/square2-min.jpg" alt="" />
+                        <img src="/img/square3-min.jpg" alt="" />
+                      </div>
                     </div>
-                    <button type="submit" className="btn-primary m--yellow mt-80">
-                      <span className="letter">S</span>
-                      <span className="letter">A</span>
-                      <span className="letter">V</span>
-                      <span className="letter">E</span>
-                    </button>
                   </>
                 )}
               </form>
-            )}
+            }
           </>
         )}
       </div>
