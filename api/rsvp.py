@@ -1,16 +1,19 @@
 import os
 import uuid
+from copy import copy
 from typing import Dict, Any, Optional
 
 from flask_cors import CORS
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 from flask_httpauth import HTTPTokenAuth
-from flask import Flask, Response, request
+from flask import Flask, request
 
 from sqlalchemy.dialects.postgresql import UUID
 
 # Initialize App
+from sqlalchemy.orm.attributes import flag_modified
+
 app = Flask(__name__)
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 auth = HTTPTokenAuth(scheme='Bearer')
@@ -46,6 +49,7 @@ class Guests(db.Model):
     plus_one_allowed = db.Column(db.Boolean(), default=False)
     phone_number = db.Column(db.String(), nullable=True)
     notes = db.Column(db.Text(), nullable=True)
+    dinner_preferences = db.Column(db.JSON(), nullable=True)
 
     UPDATE_ALLOWED = [
         'attends', 'does_not_attends', 'phone_number', 'plus_one',
@@ -67,7 +71,8 @@ class Guests(db.Model):
             'plus_one': self.plus_one,
             'plus_one_name': self.plus_one_name,
             'phone_number': self.phone_number,
-            'notes': self.notes
+            'notes': self.notes,
+            'dinner_preferences': self.dinner_preferences
         }
 
     def patch(self, data: Dict[str, Any]) -> bool:
@@ -76,14 +81,22 @@ class Guests(db.Model):
         update, the value.
         :return:
         """
+        dinner_preferences = copy(self.dinner_preferences)
         for key, value in data.items():
             if key in self.UPDATE_ALLOWED:
                 setattr(self, key, value)
-        # We modify the replied status one time.
-        self.replied = True
+            if 'dinner-preference-' in key:
+                dinner_preferences[
+                    int(key.replace('dinner-preference-', ''))]['dinner'] = value
+            if 'special-' in key:
+                dinner_preferences[
+                    int(key.replace('special-', ''))]['special'] = value
+
+        self.dinner_preferences = dinner_preferences
+        flag_modified(self, 'dinner_preferences')
+        self.replied = True  # We modify the replied status one time
         db.session.add(self)
         return db.session.commit()
-
 
 
 @auth.verify_token
