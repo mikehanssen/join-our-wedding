@@ -46,7 +46,7 @@ export default function PracticalInformation() {
               </div>
               <div className="practical-info-title">Kan ik er overnachten</div>
               <p className="practical-info-description">
-                Ja! Er zijn meerdere kamers beschikbaar bij het hotel Chateau Marquette op loopafstand van het Chateau. Laat bij het boeken weten dat je bij onze bruiloft hoort om een korting te ontvangen.
+                Ja! Er zijn meerdere kamers beschikbaar bij het hotel Chateau Marquette op loopafstand van het Chateau. {/* Laat bij het boeken weten dat je bij onze bruiloft hoort om een korting te ontvangen. */}
               </p>
             </div>
           </div>
