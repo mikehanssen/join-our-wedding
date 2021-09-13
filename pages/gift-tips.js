@@ -7,6 +7,9 @@ export default function GiftTips() {
         <h1 className="title mt-60">
           Cadeautips
         </h1>
+        <div className="gifts-links">
+          <a href="https://cadeaulijst.theperfectwedding.nl/kayleigh-en-mike">Voor het afstrepen van een cadeau kan je hier klikken en als wachtwoord <strong>02102021</strong> gebruiken!</a>
+        </div>
         <div className="gifts-container">
           <div className="gift-wrapper">
             <div className="gift-tip">
