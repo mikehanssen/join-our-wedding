@@ -27,6 +27,23 @@ export default function PracticalInformation() {
           <div className="practical-info-wrapper">
             <div className="practical-info mt-60">
               <div className="practical-info-img-wrapper">
+                <img className="practical-info-img" src="/img/corona_check.svg" alt="" />
+              </div>
+              <div className="practical-info-title">Toegangtesten</div>
+              <p className="practical-info-description">
+                Vanuit de locatie wordt toegangstesten vanaf 25 september verplicht. Dit betekent dat ook wij genoodzaakt zullen zijn om jullie te vragen
+                een geldige QR code te hebben op de dag van de bruiloft. Dit houdt wel in dat 1.5 meter afstand houden niet verplicht is, en wij live muziek
+                zullen hebben waarbij volop gedanst mag worden!
+              </p>
+              <p className="practical-info-description mt-20">
+                De corona check houdt in: gevaccineerd zijn, getest zijn (max 24 uur oud), of een geldig herstel bewijs hebben. Meer info over de <a className="color-red" href="https://coronacheck.nl">coronacheck.nl</a> kan je hier vinden.
+                Voor het maken van een afspraak om je te laten testen (alleen nodig als je niet of minder dan 14 dagen geleden je laatste vaccinatie hebt gehad) ga je naar <a className="color-red" href="https://www.testenvoortoegang.org">www.testenvoortoegang.org</a>.
+              </p>
+            </div>
+          </div>
+          <div className="practical-info-wrapper">
+            <div className="practical-info mt-60">
+              <div className="practical-info-img-wrapper">
                 <img className="practical-info-img" src="/img/parking.svg" alt="" />
               </div>
               <div className="practical-info-title">Waar kan ik parkeren?</div>
@@ -36,17 +53,6 @@ export default function PracticalInformation() {
               <div className="practical-info-title mt-30">Hoe kom ik er met het openbaar vervoer?</div>
               <p className="practical-info-description">
                 Vanaf treinstation Castricum, Beverwijk of Uitgeest kan je bus 73 of 167 nemen.
-              </p>
-            </div>
-          </div>
-          <div className="practical-info-wrapper">
-            <div className="practical-info mt-60">
-              <div className="practical-info-img-wrapper">
-                <img className="practical-info-img" src="/img/bed.svg" alt="" />
-              </div>
-              <div className="practical-info-title">Kan ik er overnachten</div>
-              <p className="practical-info-description">
-                Ja! Er zijn meerdere kamers beschikbaar bij het hotel Chateau Marquette op loopafstand van het Chateau. {/* Laat bij het boeken weten dat je bij onze bruiloft hoort om een korting te ontvangen. */}
               </p>
             </div>
           </div>
@@ -94,14 +100,25 @@ export default function PracticalInformation() {
           <div className="practical-info-wrapper">
             <div className="practical-info mt-60">
               <div className="practical-info-img-wrapper">
-                <img className="practical-info-img" src="/img/washhands.svg" alt="" />
+                <img className="practical-info-img" src="/img/bed.svg" alt="" />
               </div>
-              <div className="practical-info-title">Hoe worden de regels van covid-19 toegepast?</div>
+              <div className="practical-info-title">Kan ik er overnachten</div>
               <p className="practical-info-description">
-                Er zijn meerder ruimtes waar je je even kan terugtrekken, ook zijn er meerdere plekken op de locatie waar je je handen kan desinfecteren. Daarnaast vragen we jullie zelf een beetje de 1,5 meter in acht te houden.
+                Ja! Er zijn meerdere kamers beschikbaar bij het hotel Chateau Marquette op loopafstand van het Chateau. {/* Laat bij het boeken weten dat je bij onze bruiloft hoort om een korting te ontvangen. */}
               </p>
             </div>
           </div>
+          {/*<div className="practical-info-wrapper">*/}
+          {/*  <div className="practical-info mt-60">*/}
+          {/*    <div className="practical-info-img-wrapper">*/}
+          {/*      <img className="practical-info-img" src="/img/washhands.svg" alt="" />*/}
+          {/*    </div>*/}
+          {/*    <div className="practical-info-title">Hoe worden de regels van covid-19 toegepast?</div>*/}
+          {/*    <p className="practical-info-description">*/}
+          {/*      Er zijn meerder ruimtes waar je je even kan terugtrekken, ook zijn er meerdere plekken op de locatie waar je je handen kan desinfecteren. Daarnaast vragen we jullie zelf een beetje de 1,5 meter in acht te houden.*/}
+          {/*    </p>*/}
+          {/*  </div>*/}
+          {/*</div>*/}
           <div className="practical-info-wrapper" />
         </div>
       </div>
